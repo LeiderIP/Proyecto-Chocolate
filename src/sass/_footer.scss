@@ -1,0 +1,141 @@
+.footer{
+    background-color: $secondary-color;
+    padding: 50px 32px; 
+    &__top-section{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__title{
+        color: $font-color;
+        font-family: $font;
+        font-size: 28px;
+        font-weight: 500;
+        line-height: 1.21;
+        letter-spacing: -0.56px;
+        top: 0;
+        width: 300px;
+    }
+    &__title-text{
+        margin: 0 0 86px 0;
+    }
+}
+
+.first-word{
+    color: $primary-color;
+}
+
+.footer__contacts{
+    display: flex;
+    .contacts{
+        color: $font-color;
+        &__title{
+            margin: 0 0 14px 0;
+        }
+        &__list{
+            list-style: none;
+            padding: 0;
+            color: $font-color;
+            font-family: $font;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 1.28;
+            letter-spacing: -0.28px;
+        }
+    }
+}
+
+
+.contacts__email, 
+.contacts__phone{
+    text-decoration: none;
+    color: $font-color;
+    margin-bottom: 4px;
+    &:hover,
+    :focus{
+        cursor: pointer;
+        color: $primary-color;
+    }
+}
+
+.contacts__icons{
+    display: flex;
+    margin: 0 0 0 49px;
+    &--twitter, 
+    &--instagram{
+    width: 24px;
+    height: 24px;
+    margin-left: 14px;
+    fill: $font-color;
+    &:hover,
+    :focus{
+        fill: $primary-color;
+        cursor: pointer;
+        transform: scale(1.1);
+        }
+    }
+}
+
+// footer -> low-section
+
+.footer__low-section{
+    padding-top: 24px;
+    border-top: 1px solid;
+    border-color: rgba(255, 255, 255, 0.10);
+}
+
+.footer-list{
+    list-style: none;
+    color: $font-color;
+    font-family: $font;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: -0.28px;
+    display: flex;
+    justify-content: start;
+    gap: 24px;
+    padding:0;
+    margin: 0;
+}
+
+.footer-list__link:focus,
+.footer-list__link:hover{
+    cursor: pointer;
+    color: $primary-color;
+}
+
+// responsive design
+@media (max-width: 768px) {
+    .footer{
+        padding: 32px 20px;
+        &__top-section{
+            display: block;
+            padding-bottom: 32px;
+        }
+        &__title-text{
+            width: 300px;
+            margin-bottom: 32px;
+        }
+        &__contacts{
+            display: flex;
+            justify-content: space-between;
+        }
+        &.footer__low-section{
+            padding-top: 32px;
+        }
+    }
+    .footer-list{
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+    }
+}
+
+/* Styles for tablets */
+@media (min-width: 769px) and (max-width: 1200px) {
+    .footer__top-section{
+        justify-content: space-between;
+    }
+}

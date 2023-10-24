@@ -1,0 +1,43 @@
+<section class="subscribe">
+        <div class="subscribe__container container">
+                <h2 class="subscribe__title">EXPLORE OUR NEW CHOCOLATE FIRST</h2>
+                <P class="subscribe__text">From the velvety texture to the rich and complex flavor, our New Chocolate is a true indulgence that will leave you craving more. Made with only the finest ingredients and handcrafted with the utmost care, each piece is a work of art that is sure to please.</P>
+                <button type="button" class="subscribe__button" data-modal-open>Subscribe</button>
+        </div>
+</section>
+
+<div class="backdrop is_hidden" data-modal>
+        <div class="subscribe-modal">
+                <div class="subscribe-modal__picture">
+                        <img
+                        class="image"
+                        src="../images/Subscribe-images/BrokenChocolateTables.jpg"
+                        alt="A bunch of broken chocolate pieces"
+                        />
+                </div>
+                <div class="subscribe-modal__information">
+                        <div class="modal-content">
+                                <div class="modal-content__title">
+                                        <h2 class="modal-content__title-text">EXPLORE OUR <span class="first-word">NEW CHOCOLATE</span> FIRST!</h2>   
+                                </div>
+                                <form class="modal-content__form">
+                                        <label>
+                                                <input
+                                                class="modal-content__label"
+                                                type="email"
+                                                        name="email"
+                                                        placeholder="Enter your email"
+                                                />
+                                        </label>
+                                        <button class="modal-content__button" type="submit">Subscribe</button>
+                                </form>
+                        </div>
+                </div>
+                <button class="subscribe-modal__close-button" data-modal-close>
+                        <svg class="subscribe-modal__icon">
+                                <use href="../src/images/Subscribe-images/symbol-defs.svg#icon-x-close"></use>
+                        </svg>
+                </button>
+        </div>
+</div>
+<script src="../src/index.js"></script>

@@ -1,8 +1,9 @@
 .reviews {
   width: 1136px;
   height: 463px;
-  margin: 128px auto 0;
+  margin: 128px auto;
   overflow: hidden;
+  font-family: $font;
 }
 .reviews__heading {
   text-align: center;
@@ -32,12 +33,12 @@
   height: 200px;
   border-radius: 15px;
   border: 1px solid rgba(240, 214, 214, 0.1);
-  background: #fff;
+  background: $font-color;
   box-shadow: 0px 9px 26px 0px rgba(215, 228, 249, 0.25);
   position: relative;
   z-index: -1;
   flex-basis: calc(16.66% - 28px);
-  margin-top: 65px;
+  margin-top: 90px;
 }
 .reviews__item-img {
   transform: translate(140px, -40px);
@@ -64,6 +65,10 @@
   padding: 0;
   gap: 13px;
   list-style: none;
+  &:hover,
+  :focus{
+    cursor: pointer;
+  }
 }
 .reviews__point {
   width: 13px;
@@ -89,6 +94,7 @@
   font-weight: 600;
   align-items: center;
   cursor: pointer;
+  background-color: transparent;
 }
 .reviews__button:hover,
 .reviews__button:focus {

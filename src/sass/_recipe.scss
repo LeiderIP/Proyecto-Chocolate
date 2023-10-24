@@ -1,7 +1,12 @@
+.section{
+  padding: 94px 0 34px;
+}
 .recipe {
   display: flex;
   flex-direction: column;
   gap: 50px;
+  margin-bottom: 34px;
+  padding: 0 32px;
   &__title-name {
     text-align: center;
     font-size: 24px;
@@ -9,6 +14,7 @@
     line-height: 1.16em;
     letter-spacing: -0.72px;
     font-family: $font;
+    margin: 0;
   }
   &__title-full {
     text-align: center;

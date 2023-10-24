@@ -2,6 +2,7 @@
   list-style: none;
 }
 .flavor {
+  padding: 128px 32px 34px 32px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,6 +29,7 @@
     padding-left: 24px;
     padding-right: 24px;
     font-family: $font;
+    margin: 0;
   }
   &__description {
     color: $text-color;

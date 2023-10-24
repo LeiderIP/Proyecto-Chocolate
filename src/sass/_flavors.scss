@@ -27,11 +27,12 @@
     font-size: 24px;
     padding-left: 24px;
     padding-right: 24px;
+    font-family: $font;
   }
   &__description {
     color: $text-color;
     text-align: center;
-    font-family: Montserrat;
+    font-family: $font;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -39,6 +40,8 @@
     letter-spacing: -0.28px;
   }
   &__list {
+    font-family: $font;
+    text-align: center;
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
@@ -82,10 +85,11 @@
   color: $primary-color;
 }
 .deslizable {
+  font-family: $font;
   position: absolute;
   top: 100%;
   left: 0%;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: $font-color-bg;
   color: $text-color;
   margin: 0%;
   padding: 20px;
@@ -93,7 +97,7 @@
   transition: top 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &__head {
     color: $text-color;
-    font-family: Montserrat;
+    font-family: $font;
     font-size: 18px;
     font-style: normal;
     font-weight: 600;
@@ -116,7 +120,7 @@
     height: 24px;
     background-color: $primary-color;
     color: $font-color;
-    font-family: Montserrat;
+    font-family: $font;
     font-size: 10px;
     font-style: normal;
     font-weight: 400;
@@ -133,7 +137,7 @@
     height: 24px;
     border: 1px solid $primary-color;
     color: $text-color;
-    font-family: Montserrat;
+    font-family: $font;
     font-size: 10px;
     font-style: normal;
     font-weight: 400;
@@ -145,7 +149,7 @@
     color: $text-color;
     text-overflow: ellipsis;
     text-transform: capitalize;
-    font-family: Montserrat;
+    font-family: $font;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -156,4 +160,79 @@
 
 .flavor__item:hover .deslizable {
   top: 0%;
+}
+@media (max-width: 768px) {
+  .flavor__title {
+    max-width: 411px;
+    text-align: center;
+    font-family: $font;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px; /* 120% */
+    letter-spacing: -0.6px;
+    text-transform: uppercase;
+  }
+  .flavor__description {
+    max-width: 486px;
+    text-align: center;
+    font-family: $font;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px; /* 128.571% */
+    letter-spacing: -0.28px;
+  }
+  .flavor__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .flavor__item {
+    width: 336px;
+    display: flex;
+    align-items: center;
+  }
+  .flavor-item__container {
+    display: flex;
+    flex-direction: column;
+  }
+  .flavor__image {
+    display: flex;
+    align-self: center;
+  }
+}
+@media (max-width: 375px) {
+  .flavor__title {
+    max-width: 283px;
+    text-align: center;
+    font-family: $font;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px; /* 120% */
+    letter-spacing: -0.6px;
+    text-transform: uppercase;
+  }
+  .flavor__description {
+    max-width: 335px;
+    text-align: center;
+    font-family: $font;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px; /* 128.571% */
+    letter-spacing: -0.28px;
+  }
+  .flavor__list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    max-width: 335px;
+  }
+  .flavor__item {
+    width: 335px;
+  }
 }

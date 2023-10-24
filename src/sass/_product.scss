@@ -18,22 +18,22 @@
   color: $primary-color;
 }
 &__block {
-  display: flex;
-  flex-direction: column;
+  width: 1000px;
   gap: 32px;
-  align-items: center;
-  justify-items: center;
+  overflow: hidden;
 }
 &__list {
-  list-style: none;
-  display: flex;
   gap: 18px;
-  align-items: center;
   margin: 0;
+  width: 200%;
   padding: 0px 9px;
-  max-width: 1000px;
-  width: 100%;
-  overflow: hidden;
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: flex-start;
+  flex-flow: row nowrap;
+  transform: translateX(0%);
+  transition: transform 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 }
 .product__card {
@@ -99,3 +99,30 @@
   color: $font-color;
 }
 }
+.slider {
+  width: 100%;
+  gap: 13px;
+  list-style: none;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.slider__dot {
+  width: 13px;
+  height: 13px;
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(17, 17, 17, 0.1);
+  cursor: pointer;
+  transition: width 1s cubic-bezier(0.075, 0.82, 0.165, 1),
+    background-color 1s cubic-bezier(0.075, 0.82, 0.165, 1),
+    border-radius 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+&:hover,
+&.active {
+  width: 28px;
+  background-color: $primary-color;
+  border-radius: 35%;
+}
+}
+

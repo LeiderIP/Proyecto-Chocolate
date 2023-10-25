@@ -88,3 +88,62 @@
     list-style: disc;
   }
 }
+
+
+// resposive for phones
+@media (max-width: 375px) {
+  .recipe{
+    padding: 0 20px;
+    margin-bottom: 0;
+    &__block{
+      display: block;
+    }
+    &__video {
+      width: 335px;
+      height: 500px;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%),
+      url("/src/images/recipe-images/recipe2xPhone.jpg"), lightgray -10.819px -343.839px / 103.473% 236.295% no-repeat;
+    }
+    &__text{
+      padding: 20px 14px;
+    }
+    &__commit{
+      width: auto;
+    }
+    &__steps{
+      width: auto;
+    }
+  }
+}
+
+  // responsive for tablets
+@media (min-width: 376px) and (max-width: 768px) {
+  .recipe{
+    padding: 0 77px;
+    margin-bottom: 0;
+    &__block{
+      display: block;
+      text-align: center;
+    }
+    &__video {
+      margin-bottom: 20px;
+      width: 614px;
+      height: 400px;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%),
+      url("/src/images/recipe-images/recipeTablet.jpg"), lightgray -10.819px -343.839px / 103.473% 236.295% no-repeat;
+    }
+    &__text{
+      padding: 32px;
+    }
+    &__commit{
+      width: 350px;
+      text-align: left;
+    }
+    &__steps{
+      width: auto;
+    }
+  }
+  .section{
+    padding-bottom: 6px;
+  }
+}

@@ -1,0 +1,2 @@
+"use strict";var product__list=document.querySelector(".product__list"),slider__dot=document.querySelectorAll(".slider__dot");slider__dot.forEach((function(t,e){slider__dot[e].addEventListener("click",(function(){var t=-6.25*e;product__list.style.transform="translateX(".concat(t,"%)"),slider__dot.forEach((function(t,e){slider__dot[e].classList.remove("active")})),slider__dot[e].classList.add("active")}))}));
+//# sourceMappingURL=index.7035d117.js.map

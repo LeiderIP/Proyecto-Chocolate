@@ -52,6 +52,12 @@
     gap: 19px;
     padding: 0%;
   }
+  &-item__container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
   &__image {
     padding-bottom: 36px;
   }
@@ -83,6 +89,9 @@
     border-color: none;
   }
 }
+.flavor__text {
+  padding-right: 25%;
+}
 .flavor-title--orange {
   color: $primary-color;
 }
@@ -96,6 +105,8 @@
   margin: 0%;
   padding: 20px;
   padding-top: 0%;
+  height: 100%;
+  text-align: left;
   transition: top 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &__head {
     color: $text-color;

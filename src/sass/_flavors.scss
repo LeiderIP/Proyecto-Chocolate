@@ -1,5 +1,9 @@
 .list {
   list-style: none;
+  display: flex;
+  gap: 19px;
+  width: 1136px;
+  height: 270px;
 }
 .flavor {
   padding: 128px 32px 34px 32px;
@@ -63,14 +67,13 @@
   }
   &__item {
     width: 270px;
-    height: 270px;
     position: relative;
     overflow: hidden;
     display: flex;
     padding: 28px 36px 28px 28px;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     gap: 36px;
     border-radius: 15px;
     background: $font-color;
@@ -174,78 +177,87 @@
 .flavor__item:hover .deslizable {
   top: 0%;
 }
+
+// responsive for tablets
 @media (max-width: 768px) {
-  .flavor__title {
-    max-width: 411px;
-    text-align: center;
-    font-family: $font;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 24px; /* 120% */
-    letter-spacing: -0.6px;
-    text-transform: uppercase;
-  }
-  .flavor__description {
-    max-width: 486px;
-    text-align: center;
-    font-family: $font;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 18px; /* 128.571% */
-    letter-spacing: -0.28px;
-  }
-  .flavor__list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .flavor__item {
-    width: 336px;
-    display: flex;
-    align-items: center;
-  }
-  .flavor-item__container {
-    display: flex;
-    flex-direction: column;
-  }
-  .flavor__image {
-    display: flex;
-    align-self: center;
+  .flavor{
+    &__title {
+      max-width: 411px;
+      text-align: center;
+      font-family: $font;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 24px; /* 120% */
+      letter-spacing: -0.6px;
+      text-transform: uppercase;
+    }
+    &__description {
+      max-width: 486px;
+      text-align: center;
+      font-family: $font;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 18px; /* 128.571% */
+      letter-spacing: -0.28px;
+    }
+    &__item {
+      width: 272px;
+      height: 214px;
+      display: flex;
+      align-items: center;
+    }
+    &__image {
+      display: flex;
+      align-self: center;
+    }
+    .list{
+      width: 704px;
+      height: 572px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      justify-content: center;
+    }
   }
 }
+
+// responsive for phone
 @media (max-width: 375px) {
-  .flavor__title {
-    max-width: 283px;
-    text-align: center;
-    font-family: $font;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 24px; /* 120% */
-    letter-spacing: -0.6px;
-    text-transform: uppercase;
-  }
-  .flavor__description {
-    max-width: 335px;
-    text-align: center;
-    font-family: $font;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 18px; /* 128.571% */
-    letter-spacing: -0.28px;
-  }
-  .flavor__list {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: center;
-    align-self: center;
-    max-width: 335px;
-  }
-  .flavor__item {
-    width: 335px;
+  .flavor{
+    &__title {
+      max-width: 283px;
+      text-align: center;
+      font-family: $font;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 24px; /* 120% */
+      letter-spacing: -0.6px;
+      text-transform: uppercase;
+    }
+    &__description {
+      max-width: 335px;
+      text-align: center;
+      font-family: $font;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 18px; /* 128.571% */
+      letter-spacing: -0.28px;
+    }
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: center;
+      align-self: center;
+      max-width: 335px;
+    }
+    &__item {
+      width: 335px;
+      padding: 0;
+    }
   }
 }

@@ -106,21 +106,27 @@
     color: $primary-color;
 }
 
-// responsive design
-@media (max-width: 768px) {
+  // responsive for phones
+@media (max-width: 375px){
     .footer{
         padding: 32px 20px;
         &__top-section{
             display: block;
             padding-bottom: 32px;
+            width: 335px;
+        }
+        &__title{
+            font-size: 24px;
         }
         &__title-text{
             width: 300px;
             margin-bottom: 32px;
+            font-size: 24px;
         }
         &__contacts{
             display: flex;
             justify-content: space-between;
+            padding-right: 20px;
         }
         &.footer__low-section{
             padding-top: 32px;
@@ -132,10 +138,19 @@
         gap: 18px;
     }
 }
+.contacts__icons{
+        margin-left: 0;
+}
 
-/* Styles for tablets */
-@media (min-width: 769px) and (max-width: 1200px) {
-    .footer__top-section{
-        justify-content: space-between;
+  // responsive for tablets
+@media (min-width: 376px) and (max-width: 768px) {
+    .footer{
+        &__top-section{
+        margin-left: 0;
+        max-width: 768px;
+        }
+        &__title{
+            margin-left: 0;
+        }
     }
 }

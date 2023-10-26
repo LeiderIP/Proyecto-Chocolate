@@ -3,100 +3,101 @@
   height: 463px;
   margin: 128px auto 0;
   overflow: hidden;
+  &__heading {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.16;
+    letter-spacing: -0.72px;
+    text-transform: uppercase;
+    margin: 0;
+    &--yellow {
+      color: rgba(253, 146, 34, 1);
+    }
+  }
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 200%;
+    height: 285px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  &__item {
+    width: 360px;
+    height: 200px;
+    border-radius: 15px;
+    border: 1px solid rgba(240, 214, 214, 0.1);
+    background: #fff;
+    box-shadow: 0px 9px 26px 0px rgba(215, 228, 249, 0.25);
+    position: relative;
+    z-index: -1;
+    flex-basis: calc(16.66% - 28px);
+    margin-top: 65px;
+    &-img {
+      max-width: 100%;
+      transform: translate(140px, -40px);
+      position: absolute;
+      border-radius: 50%;
+    }
+    &-heading {
+      text-align: center;
+      margin-top: 56px;
+    }
+    &-paragraph {
+      text-align: center;
+      color: rgba(17, 17, 17, 0.7);
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.28;
+      letter-spacing: -0.28px;
+      margin: 24px 24px 42px 24px;
+    }
+  }
+  &__points {
+    display: flex;
+    justify-content: center;
+    margin: 32px 0 0 0;
+    padding: 0;
+    gap: 13px;
+    list-style: none;
+  }
+  &__point {
+    width: 13px;
+    height: 13px;
+    background-color: rgba(17, 17, 17, 0.1);
+    border-radius: 50%;
+    &.active {
+      width: 28px;
+      background-color: rgb(253, 146, 34);
+      border-radius: 40%;
+    }
+  }
+  &__button {
+    display: flex;
+    width: 222px;
+    height: 50px;
+    padding: 14px 40px;
+    margin: 50px auto;
+    border-radius: 100px;
+    border: 1px solid rgb(253, 146, 34);
+    color: rgb(17, 17, 17);
+    font-size: 18px;
+    font-weight: 600;
+    align-items: center;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      background-color: rgba(253, 146, 34, 1);
+      color: rgba(255, 255, 255, 1);
+      outline: none;
+    }
+  }
 }
-.reviews__heading {
-  text-align: center;
-  font-size: 24px;
-  font-weight: 600;
-  line-height: 1.16;
-  letter-spacing: -0.72px;
-  text-transform: uppercase;
-  margin: 0;
-}
-.reviews__heading--yellow {
-  color: rgba(253, 146, 34, 1);
-}
-.reviews__items {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  width: 200%;
-  height: 285px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  transform: translateX(0);
-}
-.reviews__item {
-  width: 360px;
-  height: 200px;
-  border-radius: 15px;
-  border: 1px solid rgba(240, 214, 214, 0.1);
-  background: #fff;
-  box-shadow: 0px 9px 26px 0px rgba(215, 228, 249, 0.25);
-  position: relative;
-  z-index: -1;
-  flex-basis: calc(16.66% - 28px);
-  margin-top: 65px;
-}
-.reviews__item-img {
-  max-width: 100%;
-  transform: translate(140px, -40px);
-  position: absolute;
-  border-radius: 50%;
-}
-.reviews__item-heading {
-  text-align: center;
-  margin-top: 56px;
-}
-.reviews__item-paragraph {
-  text-align: center;
-  color: rgba(17, 17, 17, 0.7);
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.28;
-  letter-spacing: -0.28px;
-  margin: 24px 24px 42px 24px;
-}
-.reviews__points {
-  display: flex;
-  justify-content: center;
-  margin: 32px 0 0 0;
-  padding: 0;
-  gap: 13px;
-  list-style: none;
-}
-.reviews__point {
-  width: 13px;
-  height: 13px;
-  background-color: rgba(17, 17, 17, 0.1);
-  border-radius: 50%;
-}
-.reviews__point.active {
-  width: 28px;
-  background-color: rgb(253, 146, 34);
-  border-radius: 40%;
-}
-.reviews__button {
-  display: flex;
-  width: 222px;
-  height: 50px;
-  padding: 14px 40px;
-  margin: 50px auto;
-  border-radius: 100px;
-  border: 1px solid rgb(253, 146, 34);
-  color: rgb(17, 17, 17);
-  font-size: 18px;
-  font-weight: 600;
-  align-items: center;
-  cursor: pointer;
-}
-.reviews__button:hover,
-.reviews__button:focus {
-  background-color: rgba(253, 146, 34, 1);
-  color: rgba(255, 255, 255, 1);
-  outline: none;
-}
+
 .backdrop {
   display: flex;
   justify-content: center;
@@ -150,10 +151,11 @@
   letter-spacing: -0.72px;
   text-transform: uppercase;
   margin: 50px 179px 0 40px;
+  &--yellow {
+    color: rgba(253, 146, 34, 1);
+  }
 }
-.form-reviews__heading--yellow {
-  color: rgba(253, 146, 34, 1);
-}
+
 .form-reviews__input-name {
   display: inline-flex;
   width: 437px;
@@ -258,11 +260,7 @@
   .form-reviews {
     width: 100%;
   }
-  .form-reviews__input-name {
-    width: 437px;
-    height: 66px;
-    margin: 0 24px 14px 24px;
-  }
+  .form-reviews__input-name,
   .form-reviews__input-email {
     width: 437px;
     height: 66px;

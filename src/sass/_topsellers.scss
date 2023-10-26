@@ -1,5 +1,5 @@
 .top-sellers {
-  width: 1136px;
+  width: 100%;
   height: 646px;
   margin: 0 auto;
   justify-content: center;
@@ -21,6 +21,7 @@
 }
 .top-sellers__items {
   display: flex;
+  justify-content: center;
   list-style: none;
   gap: 16px;
   padding: 0;
@@ -28,7 +29,12 @@
 }
 .top-sellers__item {
   border-radius: 15px;
+  & img {
+    max-width: 100%;
+    height: auto;
+  }
 }
+
 .buy {
   display: flex;
   width: 1136px;
@@ -37,7 +43,7 @@
   align-items: flex-start;
   gap: 567px;
   flex-shrink: 0;
-  margin-top: 32px;
+  margin: 32px auto;
 }
 .top-sellers__paragraph {
   width: 407px;
@@ -103,10 +109,11 @@
   top: 24px;
   border: none;
   background: transparent;
-}
-.button-close:hover,
-.button-close:focus {
-  fill: rgba(253, 146, 34, 1);
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    fill: rgba(253, 146, 34, 1);
+  }
 }
 
 .x-svg {
@@ -187,9 +194,9 @@
   border: 1.5px solid rgba(17, 17, 17, 0.1);
   outline: none;
   box-sizing: border-box;
-}
-.form-buy__input-name:first-of-type {
-  margin-right: 21px;
+  &:first-of-type {
+    margin-right: 21px;
+  }
 }
 .form-buy__input-name::placeholder,
 .form-buy__input-email::placeholder,
@@ -267,8 +274,8 @@
   font-size: 18px;
   font-weight: 600;
   cursor: pointer;
-}
-.form-buy__button-submit:hover {
-  background: rgba(252, 241, 224, 1);
-  color: rgba(253, 146, 34, 1);
+  &:hover {
+    background: rgba(252, 241, 224, 1);
+    color: rgba(253, 146, 34, 1);
+  }
 }

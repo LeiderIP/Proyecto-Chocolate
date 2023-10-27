@@ -57,12 +57,16 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 40px;
 }
+
 .nav {
   &__bar {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 24px 0 12px 0;
+    font-family: $font;
   }
   &__list {
     display: flex;
@@ -112,14 +116,17 @@
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
+  padding-bottom: 20px;
 }
 
 .hero__section {
-  background-image: url(../imagenes/Hero-Section.jpg);
-  width: 1136px;
+  background-image: url(/src/images/header-images/headerChocolateBG.jpg);
+  width: auto;
   height: 600px;
   margin: auto;
   border-radius: 20px;
+  margin-bottom: 72px;
+  background-size: cover;
 }
 
 .hero__list {
@@ -133,20 +140,22 @@
   font-size: 28px;
   line-height: 1.2;
   letter-spacing: -0.03em;
-  color: $color;
+  color: $font-color;
+  font-family: $font;
   width: 484px;
   height: 102px;
 }
 
 .hero__button {
+  border: 1px solid;
   display: flex;
   justify-content: center;
   background-color: transparent;
   border-radius: 100px;
   padding: 14px 40px;
-  color: $color;
+  color: $font-color;
   cursor: pointer;
-  border-color: $color;
+  border-color: $font-color;
   transition: 450ms linear;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   &:hover,
@@ -179,7 +188,7 @@
   font-size: 14px;
   line-height: 1.285;
   letter-spacing: -0.03em;
-  color: $color;
+  color: $font-color;
 }
 
 .hero__link__scroll {
@@ -195,3 +204,4 @@
 .relative {
   position: relative;
 }
+
